@@ -1,0 +1,12 @@
+name: client-tests-workflows
+
+on: pull_request
+
+jobs:
+  test-client:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Goto cleint add run tests
+        run: cd client && npm i && npm test
